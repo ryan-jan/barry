@@ -1,0 +1,32 @@
+builds:
+  - id: barry
+    binary: barry
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+
+brews:
+  - repository:
+      owner: ryan-jan
+      name: homebrew-barry
+    homepage: https://github.com/ryan-jan/barry
+    description: barry.tf is an opinionated formatter for Terraform code
+
+checksum:
+  name_template: "checksums.txt"
+
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
