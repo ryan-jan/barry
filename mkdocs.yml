@@ -1,0 +1,8 @@
+site_name: barry
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - "Barry's Code Style": code-style.md
